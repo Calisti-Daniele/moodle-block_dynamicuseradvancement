@@ -18,7 +18,7 @@
  * Per-instance configuration form for the Dynamic User advancement block.
  *
  * @package    block_dynamicuseradvancement
- * @copyright  2026 Daniele Calisti <daniele.calisti@example.com>
+ * @copyright  2026 Daniele Calisti <daniele.calisti03@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,7 +26,7 @@
  * Instance configuration form.
  *
  * @package    block_dynamicuseradvancement
- * @copyright  2026 Daniele Calisti <daniele.calisti@example.com>
+ * @copyright  2026 Daniele Calisti <daniele.calisti03@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_dynamicuseradvancement_edit_form extends block_edit_form {

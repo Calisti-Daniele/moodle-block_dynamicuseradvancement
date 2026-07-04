@@ -20,7 +20,7 @@ namespace block_dynamicuseradvancement\privacy;
  * Privacy provider: the block stores no personal data.
  *
  * @package    block_dynamicuseradvancement
- * @copyright  2026 Daniele Calisti <daniele.calisti@example.com>
+ * @copyright  2026 Daniele Calisti <daniele.calisti03@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements \core_privacy\local\metadata\null_provider {

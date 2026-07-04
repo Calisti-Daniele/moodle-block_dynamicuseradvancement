@@ -18,7 +18,7 @@
  * Version metadata for the Dynamic User advancement block.
  *
  * @package    block_dynamicuseradvancement
- * @copyright  2026 Daniele Calisti <daniele.calisti@example.com>
+ * @copyright  2026 Daniele Calisti <daniele.calisti03@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

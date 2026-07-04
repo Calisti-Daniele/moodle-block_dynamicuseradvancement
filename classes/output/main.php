@@ -27,7 +27,7 @@ use stdClass;
  * Calcola lo stato di avanzamento e lo trasforma in card con badge.
  *
  * @package    block_dynamicuseradvancement
- * @copyright  2026 Daniele Calisti <daniele.calisti@example.com>
+ * @copyright  2026 Daniele Calisti <daniele.calisti03@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class main implements renderable, templatable {
