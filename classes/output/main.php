@@ -31,7 +31,6 @@ use stdClass;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class main implements renderable, templatable {
-
     /** @var string Componente per get_string. */
     const C = 'block_dynamicuseradvancement';
 
@@ -223,8 +222,11 @@ class main implements renderable, templatable {
         } else {
             $key = 'statusprogress';
         }
-        $sub = get_string('progresssummary', self::C,
-            ['done' => $achieved, 'total' => $total, 'percent' => $percent]);
+        $sub = get_string(
+            'progresssummary',
+            self::C,
+            ['done' => $achieved, 'total' => $total, 'percent' => $percent]
+        );
         return [get_string($key, self::C, $firstname), $sub];
     }
 
@@ -235,14 +237,18 @@ class main implements renderable, templatable {
      */
     protected function check_access(): array {
         global $DB;
-        $time = $DB->get_field('user_lastaccess', 'timeaccess',
-            ['courseid' => $this->course->id, 'userid' => $this->userid]);
+        $time = $DB->get_field(
+            'user_lastaccess',
+            'timeaccess',
+            ['courseid' => $this->course->id, 'userid' => $this->userid]
+        );
         if (empty($time) && $DB->get_manager()->table_exists('logstore_standard_log')) {
             $time = $DB->get_field_sql(
                 "SELECT MIN(timecreated)
                    FROM {logstore_standard_log}
                   WHERE courseid = :courseid AND userid = :userid",
-                ['courseid' => $this->course->id, 'userid' => $this->userid]);
+                ['courseid' => $this->course->id, 'userid' => $this->userid]
+            );
         }
         if (!empty($time)) {
             return [true, userdate($time, '%d/%m/%Y')];
@@ -276,8 +282,11 @@ class main implements renderable, templatable {
         }
         $grade = (float)$grade;
         $grademax = ($item && isset($item->grademax)) ? (float)$item->grademax : 0.0;
-        $detail = get_string('gradedetail', self::C,
-            ['grade' => format_float($grade, 1), 'max' => format_float($grademax, 1)]);
+        $detail = get_string(
+            'gradedetail',
+            self::C,
+            ['grade' => format_float($grade, 1), 'max' => format_float($grademax, 1)]
+        );
         return [$grade >= $threshold, $detail];
     }
 

@@ -22,8 +22,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Instance configuration form.
  *
@@ -32,7 +30,6 @@ defined('MOODLE_INTERNAL') || die();
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_dynamicuseradvancement_edit_form extends block_edit_form {
-
     /**
      * Campi specifici di configurazione.
      *
@@ -61,8 +58,12 @@ class block_dynamicuseradvancement_edit_form extends block_edit_form {
         $mform->addElement('header', 'duagrade', get_string('cfggrade', $p));
         $mform->addElement('advcheckbox', 'config_showgrade', get_string('cfgshow', $p));
         $mform->setDefault('config_showgrade', 1);
-        $mform->addElement('select', 'config_gradecmid', get_string('cfggradeactivity', $p),
-            $this->get_graded_activities($courseid));
+        $mform->addElement(
+            'select',
+            'config_gradecmid',
+            get_string('cfggradeactivity', $p),
+            $this->get_graded_activities($courseid)
+        );
         $mform->hideIf('config_gradecmid', 'config_showgrade', 'notchecked');
         $mform->addElement('text', 'config_gradethreshold', get_string('cfgthreshold', $p));
         $mform->setType('config_gradethreshold', PARAM_FLOAT);
@@ -78,8 +79,12 @@ class block_dynamicuseradvancement_edit_form extends block_edit_form {
         $mform->addElement('header', 'duacert', get_string('cfgcert', $p));
         $mform->addElement('advcheckbox', 'config_showcert', get_string('cfgshow', $p));
         $mform->setDefault('config_showcert', 1);
-        $mform->addElement('select', 'config_certid', get_string('cfgcertinstance', $p),
-            $this->get_certificates($courseid));
+        $mform->addElement(
+            'select',
+            'config_certid',
+            get_string('cfgcertinstance', $p),
+            $this->get_certificates($courseid)
+        );
         $mform->hideIf('config_certid', 'config_showcert', 'notchecked');
         $mform->addElement('text', 'config_certlabel', get_string('cfglabel', $p));
         $mform->setType('config_certlabel', PARAM_TEXT);
