@@ -1,0 +1,173 @@
+/* Dynamic User advancement - card layout. Selettori namespaced .block_dynamicuseradvancement. */
+
+.block_dynamicuseradvancement {
+    font-size: 14px;
+    color: #2c2c2a;
+    max-width: 460px;
+}
+
+/* Intestazione con anello di progresso. */
+.block_dynamicuseradvancement .dua-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.block_dynamicuseradvancement .dua-ring-bg {
+    stroke: #e1f5ee;
+}
+
+.block_dynamicuseradvancement .dua-ring-fg {
+    stroke: #1d9e75;
+}
+
+.block_dynamicuseradvancement .dua-ring-text {
+    font-size: 12px;
+    font-weight: 500;
+    fill: #0f6e56;
+}
+
+.block_dynamicuseradvancement.dua-complete .dua-ring-fg {
+    stroke: #1d9e75;
+}
+
+.block_dynamicuseradvancement .dua-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.block_dynamicuseradvancement .dua-sub {
+    font-size: 12px;
+    color: #5f5e5a;
+    margin-top: 2px;
+}
+
+/* Stato completato. */
+.block_dynamicuseradvancement .dua-medal {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #e1f5ee;
+    color: #0f6e56;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Card. */
+.block_dynamicuseradvancement .dua-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.block_dynamicuseradvancement .dua-card {
+    background: #ffffff;
+    border: 0.5px solid #d3d1c7;
+    border-radius: 12px;
+    padding: 10px 12px;
+}
+
+.block_dynamicuseradvancement .dua-card-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.block_dynamicuseradvancement .dua-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.block_dynamicuseradvancement .dua-card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.block_dynamicuseradvancement .dua-card-label {
+    font-size: 13px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.block_dynamicuseradvancement .dua-card-detail {
+    font-size: 12px;
+    color: #5f5e5a;
+}
+
+.block_dynamicuseradvancement .dua-badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.block_dynamicuseradvancement .dua-btn {
+    display: inline-block;
+    margin-top: 8px;
+    background: #185fa5;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 18px;
+    text-decoration: none;
+}
+
+.block_dynamicuseradvancement .dua-btn:hover {
+    background: #0c447c;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Colori per stato: completato. */
+.block_dynamicuseradvancement .dua-done .dua-icon { background: #e1f5ee; color: #0f6e56; }
+.block_dynamicuseradvancement .dua-done .dua-badge { background: #e1f5ee; color: #0f6e56; }
+
+/* In corso (card evidenziata). */
+.block_dynamicuseradvancement .dua-current { background: #f4f9fd; border-color: #b5d4f4; }
+.block_dynamicuseradvancement .dua-current .dua-icon { background: #e6f1fb; color: #185fa5; }
+.block_dynamicuseradvancement .dua-current .dua-badge { background: #e6f1fb; color: #185fa5; }
+
+/* Da fare. */
+.block_dynamicuseradvancement .dua-todo { opacity: 0.85; }
+.block_dynamicuseradvancement .dua-todo .dua-icon { background: #f1efe8; color: #888780; }
+.block_dynamicuseradvancement .dua-todo .dua-badge { background: #f1efe8; color: #5f5e5a; }
+
+/* Banner scadenza (toni calmi). */
+.block_dynamicuseradvancement .dua-banner {
+    margin-top: 10px;
+    background: #eaf3de;
+    border-radius: 12px;
+    padding: 10px 12px;
+}
+
+.block_dynamicuseradvancement .dua-banner-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #3b6d11;
+}
+
+.block_dynamicuseradvancement .dua-banner-sub {
+    font-size: 12px;
+    color: #5f5e5a;
+}
+
+.block_dynamicuseradvancement .dua-empty {
+    font-size: 13px;
+    color: #888780;
+    margin: 4px 0;
+}
